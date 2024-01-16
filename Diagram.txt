@@ -1,0 +1,44 @@
+@startuml
+Customer <|-- Order
+MarketingCampaign <|-- Order
+
+class Customer {
+__ Properties __
+public int Id
+public string FirstName
+public string LastName
+public DateTime BirthDate
+public string Email
+public string PhoneNumber
+public string City
+public string ZipCode
+public string Address
+}
+class Order {
+__ Properties __
+public int Id
+public int CustomerId
+public DateTime Date
+public int MarketingCampaignId
+}
+class MarketingCampaign {
+__ Properties __
+public int Id
+public string Title
+public string Platform
+public DateTime StartDate
+public DateTime EndDate
+public int DailyBudget
+}
+class Shipment {
+__ Properties __
+public int Id
+public DateTime ShipDate
+public string Carrier
+public string TrackingNumber
+}
+class DBconnection {
+__ Methods __
+
+}
+@enduml
